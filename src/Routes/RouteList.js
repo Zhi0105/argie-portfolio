@@ -23,9 +23,9 @@ export const RouteList = () => {
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<LandingPageScreen />} />
         <Route path="/about" element={<AboutScreen />} />
-        <Route path="/skills" element={<SkillScreen />} />
-        <Route path="/works" element={<WorkScreen />} />
-        <Route path="/contacts" element={<ContactScreen />} />
+        <Route path="/skill" element={<SkillScreen />} />
+        <Route path="/work" element={<WorkScreen />} />
+        <Route path="/contact" element={<ContactScreen />} />
       </Routes>
     </AnimatePresence>
   )

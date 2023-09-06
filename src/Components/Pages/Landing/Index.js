@@ -6,9 +6,10 @@ import { FaFacebook, FaLinkedin, FaGithub } from 'react-icons/fa'
 import { DevImage } from '~_components/Lazy/LazyImage'
 import { IteratedText } from '~_components/Partials/IteratedText'
 import { Initial } from '~_components/Lazy/LazyImage'
-
+import RouteStore from '~_assets/Store/RouteStore'
 import cv from '~_assets/argie.pdf'
 export const Index = () => {
+  const {  setActiveRoute } = RouteStore(); // ROUTE STORE
   
   return (
     <div className='index_main min-h-screen flex flex-row justify-evenly items-center'>
@@ -132,7 +133,7 @@ export const Index = () => {
           delay: 4
         }}
         >
-        <Link to="/about">
+        <Link to="/about" onClick={() => setActiveRoute('about')}>
           <DevImage 
             width={500}
             height={500}
