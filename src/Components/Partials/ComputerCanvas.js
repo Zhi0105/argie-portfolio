@@ -1,6 +1,7 @@
 import { Suspense } from "react"
 import { Canvas } from "@react-three/fiber"
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei"
+import { CanvasLoader } from "./CanvasLoader"
 
 export const ComputerCanvas = () => {
 
@@ -13,10 +14,19 @@ export const ComputerCanvas = () => {
           groundColor={"black"} 
         />
         <pointLight intensity={1} />
+        <spotLight 
+          position={[ -20, 60, 10 ]}
+          angle={0.12}
+          penumbra={1}
+          intensity={1}
+          castShadow
+          shadow-mapSize={1024}
+        />
         <primitive 
           object={computer.scene}
           scale={1.8} 
-          position={[0, -2.25, -3.5]}
+          position={[ 0, -2.25, -3.5 ]}
+          rotation={[ -0.01, -0.2, -0.1 ]}
         />
       </mesh>
     )
@@ -29,7 +39,7 @@ export const ComputerCanvas = () => {
       camera={{ position: [35, 4, 10], fov: 35, zoom: 1.3, near: 1, far: 1000 }}
       gl={{ preserveDrawingBuffer: true }}
     >
-      <Suspense fallback={null}>
+      <Suspense fallback={<CanvasLoader />}>
         <OrbitControls 
           enableZoom={false}
           maxPolarAngle={Math.PI / 2.3}
