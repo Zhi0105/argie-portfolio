@@ -3,7 +3,7 @@ import { DevSkillCards } from './cards/DevSkillCards';
 
 export const DevSkill = () => {
   return (
-    <div className="roadmap_main pt-5">
+    <div className="roadmap_main">
       <div className="card_container bg-[#1D1D1D] p-6 grid grid-cols-3 gap-4 shadow-2xl">
         
         <DevSkillCards
