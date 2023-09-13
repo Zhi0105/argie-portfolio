@@ -137,8 +137,8 @@ export const Index = () => {
       <motion.div 
         className='landing_image'
         style={{
-          width: "40vw",
-          height: "40vh"
+          width: "50vw",
+          height: "50vh"
         }}
         >
           <ComputerCanvas />
