@@ -8,7 +8,7 @@ import { ProjectCards } from "~_components/Partials/cards/ProjectCards"
 
 export const Work = () => {
   return (
-    <div className='work_main min-h-screen p-8 bg-[#1D1D1D]'>
+    <div className='work_main min-h-screen p-8'>
       <div className="web_application_list p-8 grid grid-cols-2 place-items-center gap-20">
         <ProjectCards 
           image={[ <Fspotico />, <FspoticoProduct /> ]}

@@ -4,11 +4,11 @@ import { AnimatePresence } from 'framer-motion'
 import RouteStore from '~_assets/Store/RouteStore'
 
 // SCreen
-import { LandingPageScreen } from '~_components/Screens/LandingPageScreen'
 import { AboutScreen } from '~_components/Screens/AboutScreen'
 import { SkillScreen } from '~_components/Screens/SkillScreen'
 import { WorkScreen } from '~_components/Screens/WorkScreen'
 import { ContactScreen } from '~_components/Screens/ContactScreen'
+import { HomeScreen } from '~_components/Screens/HomeScreen'
 
 export const RouteList = () => {
   const location = useLocation()
@@ -21,7 +21,7 @@ export const RouteList = () => {
   return (
     <AnimatePresence initial={false}>
       <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<LandingPageScreen />} />
+        <Route path="/" element={<HomeScreen />} />
         <Route path="/about" element={<AboutScreen />} />
         <Route path="/skill" element={<SkillScreen />} />
         <Route path="/work" element={<WorkScreen />} />

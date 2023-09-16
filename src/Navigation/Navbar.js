@@ -1,18 +1,22 @@
-import { Link } from 'react-router-dom'
+import { useEffect } from 'react'
 import RouteStore from '~_assets/Store/RouteStore'
 import { motion } from 'framer-motion'
 import { Initial } from '~_components/Lazy/LazyImage'
 import { Links } from './Links'
+import { Link } from 'react-router-dom'
 import _ from 'lodash'
 
 export const Navbar = () => {
     const { route, activeRoute, setActiveRoute } = RouteStore(); // ROUTE STORE
     let routeDebounce = _.debounce(() => { return ;}, 500) // NAVIGATION HIDE within 0.5 sec if route === /
 
+    useEffect(() => {
+        route.pathname !== '/' && route.pathname && setActiveRoute(route.pathname.slice(1)) 
+    }, [setActiveRoute, route.pathname])
+    
     if(route.pathname === '/') {
         return routeDebounce()
     }
-    
   return (
     <div className='navbar_menu bg-[#1D1D1D] flex justify-between items-center text-sm md:hidden sm:hidden p-4 border-b-2'>
         <div>

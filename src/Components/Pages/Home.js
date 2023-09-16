@@ -9,7 +9,7 @@ import { ComputerCanvas } from '~_components/Partials/ComputerCanvas'
 import RouteStore from '~_assets/Store/RouteStore'
 import cv from '~_assets/argie.pdf'
 
-export const Index = () => {
+export const Home = () => {
   const {  setActiveRoute } = RouteStore(); // ROUTE STORE
   
   return (

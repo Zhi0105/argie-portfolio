@@ -19,7 +19,7 @@ export const Contact = () => {
     console.log(data)
   }
   return (
-    <div className='contact_main min-h-screen bg-[#1D1D1D] grid grid-cols-2 gap-12 place-items-center px-20'>
+    <div className='contact_main min-h-screen grid grid-cols-2 gap-12 place-items-center px-20'>
       <div
         style={{
           width: "50vw",

@@ -5,7 +5,7 @@ import { DevImage } from '~_components/Lazy/LazyImage'
 
 export const Skill = () => {
   return (
-    <div className='skill_main bg-[#1D1D1D] min-h-screen grid grid-cols-1 justify-center'>
+    <div className='skill_main min-h-screen grid grid-cols-1 justify-center'>
       <section className='flex flex-col'>
         <div className='py-8 text-center flex flex-col'>
             <label className='text-2xl font-bold text-[#08FFD4]'>My Skills</label>

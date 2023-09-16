@@ -3,7 +3,7 @@ import { IteratedText } from '~_components/Partials/IteratedText'
 
 export const About = () => {
   return (
-    <div className='about_main bg-[#1D1D1D] min-h-screen flex flex-col'>
+    <div className='about_main min-h-screen flex flex-col'>
         <div className='w-[100vw] flex flex-row'>
             <div className='w-[50%] flex flex-col gap-8 py-16 px-32'>
                 <IteratedText 
