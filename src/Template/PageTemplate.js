@@ -15,7 +15,7 @@ export const PageTemplate = ({ children }) => {
       setLoading(true)
       _.delay(() => {
         setLoading(false)
-      }, 2000)
+      }, 2500)
     }
   }, [route, setLoading])
 

@@ -1,10 +1,19 @@
-import { FadeLoader } from 'react-spinners'
+import { SyncLoader } from 'react-spinners'
+import { LoadCanvas } from '~_components/Partials/LoadCanvas'
 
 export const Preload = ({ loading }) => {
   return (
-    <div className='min-h-screen flex flex-col justify-center items-center gap-4'>
-      <FadeLoader color={"#08FFD4"} loading={loading} size={50} />
-      <div className='text-[#08FFD4]'>Loading...</div>
+    <div className='min-h-screen flex flex-col justify-center items-center'>
+      <div style={{ 
+          width: "50vw",
+          height: "50vh",
+      }}>
+        <LoadCanvas />
+      </div>
+      <div className='text-[#08FFD4] text-xl flex gap-2'>
+        <span>Loading</span>
+        <SyncLoader color={"#08FFD4"} loading={loading} size={20} />
+      </div>
     </div>
   )
 }
