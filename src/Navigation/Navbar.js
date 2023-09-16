@@ -10,11 +10,11 @@ export const Navbar = () => {
     const { route, activeRoute, setActiveRoute } = RouteStore(); // ROUTE STORE
     let routeDebounce = _.debounce(() => { return ;}, 500) // NAVIGATION HIDE within 0.5 sec if route === /
 
-    useEffect(() => {
-        route.pathname !== '/' && route.pathname && setActiveRoute(route.pathname.slice(1)) 
+    useEffect(() => {  
+        route.pathname !== '/' && route.pathname && setActiveRoute(route.pathname.slice(1))  // HANDLE ACTIVE ROUTES WHEN CLICK BACK BUTTON OF BROWSER
     }, [setActiveRoute, route.pathname])
     
-    if(route.pathname === '/') {
+    if(route.pathname === '/') { // HIDE NAVBAR ON HOME SCREEN
         return routeDebounce()
     }
   return (

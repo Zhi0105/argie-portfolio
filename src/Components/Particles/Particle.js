@@ -1,7 +1,6 @@
 import { useCallback } from 'react'
 import Particles from "react-particles";
 import { loadFull } from "tsparticles";
-import { Navbar } from '~_navigations/Navbar';
 
 export const Particle = ({ children }) => {
     const particlesInit = useCallback(async engine => {
@@ -100,7 +99,6 @@ export const Particle = ({ children }) => {
             detectRetina: true,  
         }}
         />
-        <Navbar />
         {children}
     </div>
    
