@@ -23,7 +23,7 @@ export const TextField = ({
         required={required}
         disabled={disabled}
       />
-      <label className="after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-[11px] font-normal leading-tight transition-all after:absolute after:-bottom-1.5 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-[#f59e0b] after:transition-transform after:duration-300 peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.25] peer-placeholder-shown:text-[#08FFD4] peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-[#f59e0b] peer-focus:after:scale-x-100 peer-focus:after:border-[#f59e0b]">
+      <label className="after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-[11px] text-[#08FFD4] font-normal leading-tight transition-all after:absolute after:-bottom-1.5 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-[#f59e0b] after:transition-transform after:duration-300 peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.25] peer-placeholder-shown:text-[#08FFD4] peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-[#f59e0b] peer-focus:after:scale-x-100 peer-focus:after:border-[#f59e0b]">
         <span className="font-bold">{label}</span>
       </label>
     </div>

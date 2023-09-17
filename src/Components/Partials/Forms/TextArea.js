@@ -12,7 +12,7 @@ export const TextAreaField = ({ value, autoComplete, onChange, id, name, label, 
       placeholder=" "
       required={required}
     ></textarea>
-  <label className="after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-[11px] font-normal leading-tight text-blue-gray-500 transition-all after:absolute after:-bottom-0 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-[#f59e0b] after:transition-transform after:duration-300 peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.25] peer-placeholder-shown:text-[#08FFD4] peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-[#f59e0b] peer-focus:after:scale-x-100 peer-focus:after:border-[#f59e0b] peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">      
+  <label className="after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-[11px] text-[#08FFD4] font-normal leading-tight text-blue-gray-500 transition-all after:absolute after:-bottom-0 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-[#f59e0b] after:transition-transform after:duration-300 peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.25] peer-placeholder-shown:text-[#08FFD4] peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-[#f59e0b] peer-focus:after:scale-x-100 peer-focus:after:border-[#f59e0b] peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">      
       <span className='font-bold'>{label}</span>
     </label>
   </div>

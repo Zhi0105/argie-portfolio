@@ -18,7 +18,7 @@ export const Navbar = () => {
         return routeDebounce()
     }
   return (
-    <div className='navbar_menu bg-[#1D1D1D] flex justify-between items-center text-sm md:hidden sm:hidden p-4 border-b-2'>
+    <div className='navbar_menu bg-[#1D1D1D] xs:hidden sm:hidden md:hidden lg:flex xl:flex 2xl:flex justify-between items-center text-sm p-4 border-b-2'>
         <div>
         <Link to="/">
             <Initial width={50} height={50} />

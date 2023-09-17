@@ -24,8 +24,8 @@ export const ComputerCanvas = () => {
         />
         <primitive 
           object={computer.scene}
-          scale={1.8} 
-          position={[ 0, -2.25, -3.5 ]}
+          scale={0.9} 
+          position={[ 0, -2.25, -1.0 ]}
           rotation={[ -0.01, -0.2, -0.1 ]}
         />
       </mesh>

@@ -30,7 +30,7 @@ export const Contact = () => {
       </div>
       <div className="w-full md:w-96 md:max-w-full mx-auto grid place-items-center mt-[-5%]">
           <div className="font-bold text-[#08FFD4] text-5xl mb-5">Get in Touch!</div>
-          <div className="w-full p-6 sm:rounded-md bg-[#1D1D1D] mx-4 shadow-2xl shadow-[#08FFD4]">
+          <div className="w-full p-6 sm:rounded-md mx-4 shadow-2xl shadow-[#08FFD4]">
             <form className="contact_form grid grid-cols-1 gap-4 px-8"  onSubmit={handleSubmit((data) => onSubmit(data))}>
               <div className="name_textfield">
                   <Controller

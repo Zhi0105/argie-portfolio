@@ -63,7 +63,7 @@
 }
 
 .image-container .description {
-  background-color: #1D1D1D;
+  /* background-color: #1D1D1D; */
   transition: all 0.5s linear;
   opacity: 0;
   height:100%;
