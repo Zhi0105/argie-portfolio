@@ -2,11 +2,41 @@ import { Suspense } from "react"
 import { Canvas } from "@react-three/fiber"
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei"
 import { CanvasLoader } from "./CanvasLoader"
+import { useEffect, useState } from "react"
 
 export const ComputerCanvas = () => {
 
   const Computers = () => {
     const computer = useGLTF('/assets/models/desktop.glb', true)
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth)
+
+    const updateScreenWidth = () => {
+      setScreenWidth(window.innerWidth);
+    };
+
+    useEffect(() => {
+      window.addEventListener('resize', updateScreenWidth);  
+      return () => {
+        window.removeEventListener('resize', updateScreenWidth);
+      };
+    }, []);
+
+    const handleModelScaleValue = () => {
+      if(screenWidth > 1367 && screenWidth < 1600) {
+        return 0.6
+      }
+      if(screenWidth > 1099 && screenWidth < 1366) {
+        return 0.5
+      }
+      if(screenWidth > 400 && screenWidth < 1099) {
+        return 1.5
+      }
+      if(screenWidth < 399) {
+        return 1.6
+      }
+       return 0.9
+    }
+  
     return (
       <mesh>
         <hemisphereLight 
@@ -24,7 +54,7 @@ export const ComputerCanvas = () => {
         />
         <primitive 
           object={computer.scene}
-          scale={0.9} 
+          scale={handleModelScaleValue()} 
           position={[ 0, -2.25, -1.0 ]}
           rotation={[ -0.01, -0.2, -0.1 ]}
         />
