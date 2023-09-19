@@ -26,10 +26,10 @@ export const ComputerCanvas = () => {
         return 0.6
       }
       if(screenWidth > 1099 && screenWidth < 1366) {
-        return 0.5
+        return 0.7
       }
       if(screenWidth > 400 && screenWidth < 1099) {
-        return 1.5
+        return 2
       }
       if(screenWidth < 399) {
         return 1.6
@@ -55,8 +55,8 @@ export const ComputerCanvas = () => {
         <primitive 
           object={computer.scene}
           scale={handleModelScaleValue()} 
-          position={[ 0, -2.25, -1.0 ]}
-          rotation={[ -0.01, -0.2, -0.1 ]}
+          position={[ 0, -2.25, -1.5 ]}
+          rotation={[ -0.01, -0.2,-0.1 ]}
         />
       </mesh>
     )

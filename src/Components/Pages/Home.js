@@ -14,7 +14,7 @@ export const Home = () => {
         <Greet />
         <div 
           className='computer_model_container text-white
-           xs:h-1/2 sm:h-1/2 md:h-1/2 lg:h-full lg:w-full xl:h-full xl:w-full
+           xs:h-3/4 sm:h-3/4 md:h-3-/4 lg:h-full lg:w-full xl:h-full xl:w-full
         '>
           <ComputerCanvas />
         </div>
