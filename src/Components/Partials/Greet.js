@@ -135,11 +135,11 @@ export const Greet = () => {
     
 
     {/* MOBILE VIEW */}
-    <div className='greet_mobile_main text-white flex flex-col justify-center pl-20
+    <div className='greet_mobile_main text-white flex flex-col justify-center pl-20 pb-10
       xs:flex sm:flex md:flex lg:hidden xl:hidden
     '>
 
-      <label className='font-bold text-5xl xs:text-3xl lg:text-4xl xl:text-5xl'>
+      <label className='font-bold text-5xl lg:text-4xl xl:text-5xl'>
           Hello,
       </label>
       

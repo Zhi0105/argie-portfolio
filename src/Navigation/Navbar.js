@@ -4,6 +4,8 @@ import { motion } from 'framer-motion'
 import { Initial } from '~_components/Lazy/LazyImage'
 import { Links } from './Links'
 import { Link } from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUser, faHammer, faBriefcase, faPhoneVolume } from '@fortawesome/free-solid-svg-icons'
 import _ from 'lodash'
 
 export const Navbar = () => {
@@ -17,14 +19,40 @@ export const Navbar = () => {
     if(route.pathname === '/') { // HIDE NAVBAR ON HOME SCREEN
         return routeDebounce()
     }
+
+    const NavIcons = ({ name }) => {
+        if(name === 'about'){
+            return(
+                <FontAwesomeIcon icon={faUser} fontSize={18} />
+            )
+        }
+        if(name === 'skill'){
+            return(
+                <FontAwesomeIcon icon={faHammer} fontSize={18} />
+            )
+        }
+        if(name === 'work'){
+            return(
+                <FontAwesomeIcon icon={faBriefcase} fontSize={18} />
+            )
+        }
+        if(name === 'contact'){
+            return(
+                <FontAwesomeIcon icon={faPhoneVolume} fontSize={18} />
+            )
+        }
+    }
+
   return (
-    <div className='navbar_menu bg-[#1D1D1D] xs:hidden sm:hidden md:hidden lg:flex xl:flex 2xl:flex justify-between items-center text-sm p-4 border-b-2'>
-        <div>
-        <Link to="/">
-            <Initial width={50} height={50} />
-        </Link>
-        </div>
-        <div className='menu_item flex flex-row gap-8 text-[#08FFD4] text-lg pr-4'>
+    <>
+        {/* DESKTOP */}
+        <div className='navbar_menu bg-[#1D1D1D] xs:hidden sm:hidden md:hidden lg:flex xl:flex 2xl:flex justify-between items-center text-sm p-4 border-b-2'>
+            <div>
+            <Link to="/">
+                <Initial width={50} height={50} />
+            </Link>
+            </div>
+            <div className='menu_item flex flex-row gap-8 text-[#08FFD4] text-lg pr-4'>
             {Links.map((link, index) => {
                 return (
                     <motion.div
@@ -39,7 +67,31 @@ export const Navbar = () => {
                 </motion.div>
                 )
             })}
+            </div>
+        </div>  
+        {/* DESKTOP */}
+
+        {/* MOBILE */}
+        <div className='mobile_navbar_wrapper w-screen xs:flex sm:flex md:flex lg:hidden xl:hidden bg-gray-300 text-black fixed bottom-0'>
+            <div className='mobile_navbar_items w-full text-sm flex justify-evenly py-4 px-4'>
+                {Links.map((link, index) => {
+                    return (
+                    <Link
+                        className={`font-bold flex flex-col text-center capitalize ${activeRoute === link.title && 'text-[#d97706]'}`}
+                        onClick={() => setActiveRoute(link.title)}
+                        to={`/${link.title}`}
+                        key={index}
+                    >
+                        <NavIcons 
+                            name={link.title} 
+                        />
+                        <label>{link.title}</label>
+                    </Link>
+                    )
+                })}
+            </div>
         </div>
-    </div>  
+        {/* MOBILE */}
+    </>
   )
 }

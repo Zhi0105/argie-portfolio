@@ -9,7 +9,6 @@ export const ComputerCanvas = () => {
   const Computers = () => {
     const computer = useGLTF('/assets/models/desktop.glb', true)
     const [screenWidth, setScreenWidth] = useState(window.innerWidth)
-
     const updateScreenWidth = () => {
       setScreenWidth(window.innerWidth);
     };
@@ -20,6 +19,7 @@ export const ComputerCanvas = () => {
         window.removeEventListener('resize', updateScreenWidth);
       };
     }, []);
+
 
     const handleModelScaleValue = () => {
       if(screenWidth > 1367 && screenWidth < 1600) {
@@ -36,6 +36,7 @@ export const ComputerCanvas = () => {
       }
        return 0.9
     }
+
   
     return (
       <mesh>

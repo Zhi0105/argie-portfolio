@@ -32,7 +32,9 @@ export const PageTemplate = ({ children }) => {
   return (
     <motion.div className='template_main shadow-current'>
       <Navbar />
-      {children}
+      <div className='mb-28'>
+        {children}
+      </div>
     </motion.div>
   )
 }
